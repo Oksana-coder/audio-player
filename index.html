@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Player</title>
+</head>
+<body>
+    <div class="player-controls">
+        <button id="playPauseBtn" class="playPauseBtn">
+            <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+
+        <div class="speed-dropdown">
+            <button id="dropdown-btn" class="dropdown-btn">1.0x</button>
+            <ul id="dropdown-items" class="dropdown-items">
+                <li> 0.5x </li>
+                <li> 0.75x </li>
+                <li> 1.0x </li>
+                <li> 1.25x </li>
+                <li> 1.5x </li>
+                <li> 1.75x </li>
+                <li> 2.0x </li>
+            </ul>
+        </div>
+
+        <div class="duration">
+            <input type="range" min="0" max="100" value="0" id="duration-slider" class="duration_slider">
+        </div>
+
+        <div id="playtime-left" class="playtime-left">00:00</div>
+    </div>
+
+    <script src="audio-player.js"></script>
+</body>
+</html>
