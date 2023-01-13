@@ -94,3 +94,18 @@ ul {
     visibility: visible;
     opacity: 1;
 }
+
+.listen-to-article-headline {
+    margin-bottom: -25px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #156FBC;
+}
+
+.fa.fa-headphones {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/*Input range styling*/
