@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Triangle</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="WWW-artikelanhoeren" transform="translate(-860.000000, -827.000000)" fill="#156FBC">
+            <g id="Playbutton-Copy-5" transform="translate(846.000000, 816.000000)">
+                <path d="M21.5097295,12.871592 C21.7804984,12.390225 22.2224731,12.3955078 22.4902705,12.871592 L30.5097295,27.128408 C30.7804984,27.609775 30.5550537,28 30.0066023,28 L13.9933977,28 C13.4447593,28 13.2224731,27.6044922 13.4902705,27.128408 L21.5097295,12.871592 Z" id="Triangle" transform="translate(22.000000, 20.000000) rotate(90.000000) translate(-22.000000, -20.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
