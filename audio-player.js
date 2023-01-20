@@ -34,6 +34,7 @@ function playPause() {
         isPlaying = true;
         audio.play();
         intervalId = setInterval(updateDurationSliderPosition, 500);
+        trackAudioDurationListened();
         playPauseBtn.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
     } else {
         isPlaying = false;
@@ -48,6 +49,7 @@ function goToAudioStart() {
     clearInterval(intervalId);
     playPauseBtn.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
     slider.value = 0;
+    slider.style.backgroundSize = "0% 100%";
 }
 
 function updateDurationSliderPosition() {
@@ -56,12 +58,46 @@ function updateDurationSliderPosition() {
     if (!isNaN(audio.duration)) {
         position = audio.currentTime * (100 / audio.duration);
         slider.value = position;
+        const bgSizePercentage = position >= 75 ? position - 0.5 : position + 0.5;
+        slider.style.backgroundSize = bgSizePercentage + "% 100%";
     }
+}
+
+function trackAudioDurationListened() {
+    let audio25 = true;
+    let audio50 = true;
+    let audio75 = true;
+    let audio100 = true;
+
+    const audioIntervalId = setInterval(() => {
+        if(audio.currentTime >= audio.duration * 0.25 && audio25) {
+            console.log("25% of Audio!")
+            audio25 = false;
+        }
+        if(audio.currentTime >= audio.duration * 0.5 && audio50) {
+            console.log("50% of Audio!")
+            audio50 = false;
+        }
+        if(audio.currentTime >= audio.duration * 0.75 && audio75) {
+            console.log("75% of Audio!")
+            audio75 = false;
+        }
+        if(audio.currentTime >= audio.duration * 0.995 && audio100) {
+            console.log("100% of Audio!")
+            audio100 = false;
+        }
+
+        if(!audio100) {
+            clearInterval(audioIntervalId);
+        }
+    }, 1000);
+
 }
 
 function changeSliderPosition() {
     const sliderPosition = audio.duration * (slider.value / 100);
     audio.currentTime = sliderPosition;
+    slider.style.backgroundSize = slider.value + "% 100%";
 }
 
 function toggleDropdown(e) {
